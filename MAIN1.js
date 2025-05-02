@@ -153,3 +153,74 @@ document.addEventListener('DOMContentLoaded', function() {
     `;
     document.head.appendChild(style);
   });
+document.addEventListener('DOMContentLoaded', function() {
+  const carouselTrack = document.querySelector('.carousel-track');
+  const slides = document.querySelectorAll('.carousel-slide');
+  const prevBtn = document.querySelector('.prev-btn');
+  const nextBtn = document.querySelector('.next-btn');
+  const indicators = document.querySelectorAll('.indicator');
+  
+  let currentIndex = 0;
+  const slideCount = slides.length;
+  
+  function updateCarousel() {
+      slides.forEach(slide => slide.classList.remove('active'));
+      indicators.forEach(indicator => indicator.classList.remove('active'));
+      
+      slides[currentIndex].classList.add('active');
+      indicators[currentIndex].classList.add('active');
+      
+      const slideWidth = slides[0].getBoundingClientRect().width;
+      carouselTrack.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
+  }
+  function nextSlide() {
+      currentIndex = (currentIndex + 1) % slideCount;
+      updateCarousel();
+  }
+  function prevSlide() {
+      currentIndex = (currentIndex - 1 + slideCount) % slideCount;
+      updateCarousel();
+  }
+  function goToSlide(index) {
+      currentIndex = index;
+      updateCarousel();
+  }
+  nextBtn.addEventListener('click', nextSlide);
+  prevBtn.addEventListener('click', prevSlide);
+  indicators.forEach((indicator, index) => {
+      indicator.addEventListener('click', () => goToSlide(index));
+  });
+  
+  let autoSlideInterval = setInterval(nextSlide, 5000);
+  
+  carouselTrack.addEventListener('mouseenter', () => {
+      clearInterval(autoSlideInterval);
+  });
+  
+  carouselTrack.addEventListener('mouseleave', () => {
+      autoSlideInterval = setInterval(nextSlide, 5000);
+  });
+  let touchStartX = 0;
+  let touchEndX = 0;
+  
+  carouselTrack.addEventListener('touchstart', (e) => {
+      touchStartX = e.changedTouches[0].screenX;
+  }, {passive: true});
+  
+  carouselTrack.addEventListener('touchend', (e) => {
+      touchEndX = e.changedTouches[0].screenX;
+      handleSwipe();
+  }, {passive: true});
+  
+  function handleSwipe() {
+      if (touchEndX < touchStartX - 50) {
+          nextSlide();
+      } else if (touchEndX > touchStartX + 50) {
+          prevSlide();
+      }
+  }
+  updateCarousel();
+  window.addEventListener('resize', () => {
+      updateCarousel();
+  });
+});
