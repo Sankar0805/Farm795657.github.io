@@ -1,0 +1,445 @@
+:root {
+    --primary-color: #27ae60;
+    --secondary-color: #2c3e50;
+    --accent-color: #f39c12;
+    --light-color: #ecf0f1;
+    --dark-color: #34495e;
+    --text-color: #333;
+    --text-light: #7f8c8d;
+    --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --transition: all 0.3s ease;
+  }
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: #f9f9f9;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+
+  header {
+    background-color: var(--secondary-color);
+    color: #fff;
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+  }
+
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .logo img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid var(--primary-color);
+  }
+
+  .logo span {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--light-color);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+
+  .logo span::after {
+    content: 'MEDIC';
+    color: var(--primary-color);
+  }
+
+  nav ul {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+  }
+
+  nav ul li a {
+    color: var(--light-color);
+    text-decoration: none;
+    font-weight: 500;
+    padding: 8px 0;
+    transition: var(--transition);
+    position: relative;
+  }
+
+  nav ul li a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background: var(--primary-color);
+    bottom: 0;
+    left: 0;
+    transition: var(--transition);
+  }
+
+  nav ul li a:hover::after {
+    width: 100%;
+  }
+
+  nav ul li a:hover {
+    color: var(--primary-color);
+  }
+
+  .search-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-left: 20px;
+  }
+
+  #searchInput {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 30px;
+    width: 200px;
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    transition: var(--transition);
+  }
+
+  #searchInput::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+  }
+
+  #searchInput:focus {
+    outline: none;
+    background: rgba(255, 255, 255, 0.2);
+    width: 250px;
+  }
+
+  .search-btn {
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: var(--transition);
+  }
+
+  .search-btn:hover {
+    background: #219653;
+  }
+
+  main {
+    flex: 1;
+  }
+
+  .hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1500382017468-9049fed747ef?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    padding: 100px 20px;
+    margin-bottom: 40px;
+  }
+
+  .hero h1 {
+    font-size: 2.8rem;
+    margin-bottom: 20px;
+  }
+
+  .hero p {
+    font-size: 1.2rem;
+    max-width: 700px;
+    margin: 0 auto;
+  }
+
+  .remedies-section {
+    padding: 40px 0;
+  }
+
+  .section-title {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+
+  .section-title h2 {
+    font-size: 2.2rem;
+    color: var(--secondary-color);
+    position: relative;
+    display: inline-block;
+  }
+
+  .section-title h2::after {
+    content: '';
+    position: absolute;
+    width: 50%;
+    height: 3px;
+    background: var(--primary-color);
+    bottom: -10px;
+    left: 25%;
+  }
+
+  .remedies-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 30px;
+  }
+
+  .remedy-card {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+  }
+
+  .remedy-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  }
+
+  .remedy-image {
+    height: 250px;
+    overflow: hidden;
+  }
+
+  .remedy-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: var(--transition);
+  }
+
+  .remedy-card:hover .remedy-image img {
+    transform: scale(1.05);
+  }
+
+  .remedy-content {
+    padding: 25px;
+  }
+
+  .remedy-title {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: var(--secondary-color);
+  }
+
+  .remedy-desc {
+    color: var(--text-light);
+    margin-bottom: 15px;
+  }
+
+  .remedy-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 15px;
+  }
+
+  .remedy-meta span {
+    background: #e8f5e9;
+    color: var(--primary-color);
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 500;
+  }
+
+  .remedy-steps {
+    margin-top: 20px;
+  }
+
+  .remedy-steps h4 {
+    margin-bottom: 10px;
+    color: var(--secondary-color);
+  }
+
+  .remedy-steps ol {
+    padding-left: 20px;
+  }
+
+  .remedy-steps li {
+    margin-bottom: 8px;
+    color: var(--text-color);
+  }
+
+  footer {
+    background-color: var(--secondary-color);
+    color: white;
+    padding: 50px 0 20px;
+    margin-top: auto;
+  }
+
+  .footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+    margin-bottom: 30px;
+  }
+
+  .footer-column h3 {
+    color: var(--primary-color);
+    margin-bottom: 20px;
+    font-size: 1.3rem;
+    position: relative;
+    padding-bottom: 10px;
+  }
+
+  .footer-column h3::after {
+    content: '';
+    position: absolute;
+    width: 50px;
+    height: 2px;
+    background: var(--primary-color);
+    bottom: 0;
+    left: 0;
+  }
+
+  .footer-column p {
+    color: var(--light-color);
+    margin-bottom: 15px;
+    line-height: 1.7;
+  }
+
+  .footer-links {
+    list-style: none;
+  }
+
+  .footer-links li {
+    margin-bottom: 12px;
+  }
+
+  .footer-links a {
+    color: var(--light-color);
+    text-decoration: none;
+    transition: var(--transition);
+    display: block;
+  }
+
+  .footer-links a:hover {
+    color: var(--primary-color);
+    padding-left: 5px;
+  }
+
+  .social-links {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+  }
+
+  .social-links a {
+    color: white;
+    background: rgba(255, 255, 255, 0.1);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: var(--transition);
+  }
+
+  .social-links a:hover {
+    background: var(--primary-color);
+    transform: translateY(-3px);
+  }
+
+  .copyright {
+    text-align: center;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    color: var(--light-color);
+    font-size: 0.9rem;
+  }
+
+  @media (max-width: 992px) {
+    .remedies-grid {
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    }
+    
+    .hero h1 {
+      font-size: 2.4rem;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .navbar {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .search-container {
+      margin: 15px 0;
+      width: 100%;
+    }
+
+    #searchInput {
+      width: 100%;
+    }
+
+    nav ul {
+      flex-direction: column;
+      width: 100%;
+      gap: 10px;
+      margin-top: 15px;
+    }
+
+    .hero {
+      padding: 80px 20px;
+    }
+
+    .hero h1 {
+      font-size: 2rem;
+    }
+
+    .footer-content {
+      grid-template-columns: 1fr;
+      gap: 30px;
+    }
+  }
+
+  @media (max-width: 576px) {
+    .remedies-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .hero h1 {
+      font-size: 1.8rem;
+    }
+
+    .section-title h2 {
+      font-size: 1.8rem;
+    }
+  }
+  @keyframes highlight {
+    0% { box-shadow: 0 0 0 0 rgba(46, 204, 113, 0.7); }
+    50% { box-shadow: 0 0 20px 10px rgba(46, 204, 113, 0.4); }
+    100% { box-shadow: 0 0 0 0 rgba(46, 204, 113, 0); }
+  }
+
+  .search-highlight {
+    animation: highlight 1.5s;
+  }

@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Get started with FarmMedic - Your guide to healthy crops">
+  <title>Farm Medic | Get Started</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="START.css">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="container">
+      <div class="nav-container">
+        <a href="#" class="logo">
+          <img src="https://i.pinimg.com/736x/2d/2c/02/2d2c0249f1ffd387fab3cae2fa033f15.jpg" alt="FarmMedic Logo" loading="lazy">
+          <span class="logo-text">FarmMedic</span>
+        </a>
+        <button class="mobile-menu-btn" id="mobileMenuBtn">
+          <i class="fas fa-bars"></i>
+        </button>
+        <ul class="nav-links" id="navLinks">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="MISSION X.html" class="active">Crops</a></li>
+          <li><a href="viruses.html">Viruses</a></li>
+          <li><a href="remedies.html">Remedies</a></li>
+          <li><a href="MISSION X.html" class="active">Get Started</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <section class="hero-section">
+    <div class="container">
+      <div class="hero-content">
+        <h1>Protect Your Crops with Confidence</h1>
+        <p>Discover our comprehensive solutions for identifying and treating crop diseases effectively</p>
+        <div class="hero-buttons">
+          <a href="MISSION X.html" class="btn">Get Started Now</a>
+          <a href="viruses.html" class="btn btn-outline">Learn About Viruses</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="get-started-section" id="guide">
+    <div class="container">
+      <div class="section-header">
+        <h1>Getting Started with FarmMedic</h1>
+        <p>Follow our step-by-step guide to identify, prevent, and treat crop diseases effectively</p>
+      </div>
+      
+      <div class="guide-carousel">
+        <div class="guide-track" id="guideTrack">
+          <div class="guide-slide">
+            <div class="guide-image">
+              <img src="https://cdn.worldtree.eco/wp-content/uploads/soil-feature-ed.jpg" alt="Identify Problems" loading="lazy">
+            </div>
+            <div class="guide-content">
+              <span class="guide-step">Step 1</span>
+              <h3>Identify Crop Problems</h3>
+              <p>Learn to recognize early signs of disease, nutrient deficiencies, and pest damage in your crops.</p>
+              <a href="viruses.html" class="btn">Learn Identification</a>
+              <a href="#" class="btn btn-outline">Watch Video Guide</a>
+            </div>
+          </div>
+          <div class="guide-slide">
+            <div class="guide-image">
+              <img src="https://images.theconversation.com/files/106468/original/image-20151217-8081-2ykemk.jpg?ixlib=rb-4.1.0&q=45&auto=format&w=926&fit=clip" alt="Diagnose Issues" loading="lazy">
+            </div>
+            <div class="guide-content">
+              <span class="guide-step">Step 2</span>
+              <h3>Diagnose Specific Issues</h3>
+              <p>Use our comprehensive database to pinpoint exact viruses, fungi, or pests affecting your plants.</p>
+              <a href="viruses.html" class="btn">Virus Database</a>
+              <a href="#" class="btn btn-outline">Symptom Checker</a>
+            </div>
+          </div>
+          <div class="guide-slide">
+            <div class="guide-image">
+              <img src="https://www.apdaparkinson.org/wp-content/uploads/2024/02/herbal-remedies-supplements-scaled.jpeg" alt="Apply Solutions" loading="lazy">
+            </div>
+            <div class="guide-content">
+              <span class="guide-step">Step 3</span>
+              <h3>Apply Effective Solutions</h3>
+              <p>Discover organic and conventional treatment options tailored to your specific crop problems.</p>
+              <a href="remedies.html" class="btn">View Remedies</a>
+              <a href="#" class="btn btn-outline">Treatment Planner</a>
+            </div>
+          </div>
+        </div>
+        <div class="guide-nav">
+          <button class="guide-btn prev-btn" id="guidePrevBtn">
+            <i class="fas fa-chevron-left"></i>
+          </button>
+          <button class="guide-btn next-btn" id="guideNextBtn">
+            <i class="fas fa-chevron-right"></i>
+          </button>
+        </div>
+        <div class="guide-indicators" id="guideIndicators">
+          <span class="guide-indicator active" data-index="0"></span>
+          <span class="guide-indicator" data-index="1"></span>
+          <span class="guide-indicator" data-index="2"></span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="steps-section">
+    <div class="container">
+      <div class="section-header">
+        <h1>Your Crop Protection Journey</h1>
+        <p>Follow these essential steps to maintain healthy crops and maximize your yield</p>
+      </div>
+      
+      <div class="steps-container">
+        <div class="step-card">
+          <div class="step-icon">
+            <i class="fas fa-search"></i>
+          </div>
+          <h3>Regular Monitoring</h3>
+          <p>Inspect your crops weekly for early signs of disease or pest infestation. Early detection is key to effective treatment.</p>
+          <a href="#" class="read-more">Learn Monitoring Techniques <i class="fas fa-arrow-right"></i></a>
+        </div>
+        
+        <div class="step-card">
+          <div class="step-icon">
+            <i class="fas fa-clipboard-check"></i>
+          </div>
+          <h3>Accurate Diagnosis</h3>
+          <p>Use our tools to correctly identify problems before treatment. Misdiagnosis can waste time and resources.</p>
+          <a href="viruses.html" class="read-more">Diagnosis Tools <i class="fas fa-arrow-right"></i></a>
+        </div>
+        
+        <div class="step-card">
+          <div class="step-icon">
+            <i class="fas fa-spray-can"></i>
+          </div>
+          <h3>Targeted Treatment</h3>
+          <p>Apply the most effective remedies for your specific issue, whether organic or conventional solutions.</p>
+          <a href="remedies.html" class="read-more">Treatment Options <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-column">
+          <h3>About FarmMedic</h3>
+          <p>We are dedicated to helping farmers protect their crops through scientific solutions and traditional wisdom combined.</p>
+          <div class="social-links">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+        <div class="footer-column">
+          <h3>Quick Links</h3>
+          <ul class="footer-links">
+            <li><a href="index.html"><i class="fas fa-chevron-right"></i> Home</a></li>
+            <li><a href="MISSION X.html"><i class="fas fa-chevron-right"></i> Crop Diseases</a></li>
+            <li><a href="viruses.html"><i class="fas fa-chevron-right"></i> Virus Database</a></li>
+            <li><a href="remedies.html"><i class="fas fa-chevron-right"></i> Treatment Solutions</a></li>
+            <li><a href="#"><i class="fas fa-chevron-right"></i> Ask an Expert</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h3>Contact Us</h3>
+          <ul class="footer-links">
+            <li><a href="#"><i class="fas fa-map-marker-alt"></i> Visakhapatnam, Andhra Pradesh</a></li>
+            <li><a href="tel:+919999999999"><i class="fas fa-phone-alt"></i> +91 99999 99999</a></li>
+            <li><a href="mailto:info@farmmedic.com"><i class="fas fa-envelope"></i> info@farmmedic.com</a></li>
+            <li><a href="#"><i class="fas fa-clock"></i> Mon-Sat: 9AM to 6PM</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 FarmMedic. All Rights Reserved. | Developed by Vignan's Institute of Information Technology</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="START.js">
+
+  </script>
+</body>
+</html>
